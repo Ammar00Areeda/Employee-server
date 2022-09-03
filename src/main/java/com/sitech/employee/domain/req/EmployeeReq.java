@@ -14,7 +14,7 @@ public class EmployeeReq {
     private String employeeName;
     private String joinedDate;
     private String jobTitle;
-    private int salary;
+
 
 
 

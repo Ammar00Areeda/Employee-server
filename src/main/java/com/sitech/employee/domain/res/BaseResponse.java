@@ -9,6 +9,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class BaseResponse<T> {
+
+    public BaseResponse(int code, String message) {
+        this.code = code;
+        this.message = message;
+    }
+
     @JsonProperty("response_code")
     public int code;
 

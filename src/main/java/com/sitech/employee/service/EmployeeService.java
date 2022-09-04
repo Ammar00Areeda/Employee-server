@@ -31,7 +31,7 @@ public class EmployeeService {
         employee.setJobTitle(employeeReq.getJobTitle());
         employee.setJoinedDate(employeeReq.getJoinedDate());
         empolyeeRepository.save(employee);
-        return new BaseResponse(200, "Employee created");
+        return new BaseResponse(200, "Employee created",employeeReq);
     }
 
     public BaseResponse<EmployeeRes> getEmployee(long id) {

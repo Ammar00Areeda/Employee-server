@@ -34,7 +34,7 @@ public class EmployeeController {
     }
 
     @PostMapping("/")
-    public BaseResponse newEmployee(@RequestBody EmployeeReq employeeReq ){
+    public BaseResponse newEmployee(@RequestBody EmployeeReq employeeReq , EmployeeRes employeeRes ){
         return employeeService.addEmployee(employeeReq);
     }
 

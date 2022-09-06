@@ -23,16 +23,19 @@ public class SalaryController {
         salaryService.getSalaryById(id);
         return new BaseResponse<>(200,"this is the salary");
     }
-    // TODO: 9/4/2022 post salary by id ()
-
-
-
-
-    @PostMapping("/{id}")
+    // TODO: 9/4/2022 post salary
+    @PostMapping("/")
     public BaseResponse setSalaryById(@RequestBody SalaryRequest salaryRequest){
-        return salaryService.setSalary(salaryRequest);
+        salaryService.setSalary(salaryRequest);
+        return new BaseResponse<>();
     }
     // TODO: 9/4/2022 update salary()
+
+    @PutMapping("/{id}")
+    public BaseResponse updateSalaryBYId (@PathVariable long id , @RequestBody SalaryRequest salaryRequest){
+        salaryService.updateById(id,salaryRequest);
+        return new BaseResponse<>();
+    }
 
 
 }

@@ -26,9 +26,15 @@ public class SalaryService {
 
     public BaseResponse setSalary (SalaryRequest salaryRequest) {
 
-        // TODO: 9/4/2022 add id  
         SalaryEntity salaryEntity = new SalaryEntity();
         salaryEntity.setSalary(salaryRequest.getSalary());
+        return new BaseResponse<>();
+    }
+
+    public BaseResponse updateById(long id , SalaryRequest salaryRequest) {
+        SalaryResponse salaryResponse= new SalaryResponse();
+        salaryResponse.setNetSalary(salaryRequest.getSalary());
+
         return new BaseResponse<>();
     }
 }
